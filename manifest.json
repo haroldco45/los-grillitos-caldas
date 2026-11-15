@@ -1,0 +1,15 @@
+{
+  "name": "Los Grillitos · Diversión sin fin",
+  "short_name": "Los Grillitos",
+  "description": "Parque de diversiones infantil en Caldas, Antioquia, para niños de 1 a 6 años.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#1f8a3b",
+  "lang": "es-CO",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

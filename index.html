@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los Grillitos · Diversión sin fin · Caldas, Antioquia</title>
+<meta name="description" content="Parque de diversiones infantil en Caldas, Antioquia, para niños de 1 a 6 años: piscinas de pelotas, brinquitos, toboganes, zona de bebés y zona para piñatas. Reserva por WhatsApp.">
+<meta name="theme-color" content="#1f8a3b">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<!-- Vista previa al compartir -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Los Grillitos · Diversión sin fin">
+<meta property="og:description" content="El parque infantil de Caldas, Antioquia, para niños de 1 a 6 años. Piscinas de pelotas, brinquitos, toboganes y fiestas con piñata.">
+<meta property="og:image" content="https://los-grillitos-caldas.netlify.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://los-grillitos-caldas.netlify.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://los-grillitos-caldas.netlify.app/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#1f8a3b;--lima:#9bd33a;--amarillo:#ffd23f;--rojo:#e63946;--morado:#7b2cbf;--azul:#1d8fe1;--tinta:#1b1b2f;--crema:#fffaf0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--crema);color:var(--tinta);overflow-x:hidden}
+h1,h2,h3{font-family:"Baloo 2",cursive;line-height:1.05}
+a{color:inherit}
+/* barra */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(255,250,240,.88);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.marca{display:flex;align-items:center;gap:10px;font-family:"Baloo 2";font-weight:800;font-size:1.25rem;color:var(--verde);text-decoration:none}
+.marca img{width:40px;height:40px;border-radius:12px;object-fit:cover;border:2px solid var(--amarillo)}
+.acc{display:flex;gap:8px}
+.chip{border:0;cursor:pointer;font:800 .8rem Nunito;padding:8px 12px;border-radius:999px;background:var(--tinta);color:#fff}
+.chip.alt{background:var(--amarillo);color:var(--tinta)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 30%,rgba(20,10,40,.85))}
+.hero .in{position:relative;z-index:2;padding:110px 20px 60px;max-width:900px}
+.edad{display:inline-block;background:var(--rojo);padding:6px 14px;border-radius:999px;font-weight:800;font-size:.9rem;animation:lat 2.4s infinite}
+.hero h1{font-size:clamp(3rem,13vw,6.5rem);margin:12px 0 6px;text-shadow:0 6px 24px rgba(0,0,0,.5)}
+.hero h1 span{display:inline-block;animation:salta 1.6s infinite}
+.hero h1 span:nth-child(2n){animation-delay:.12s;color:var(--amarillo)}
+.hero h1 span:nth-child(3n){animation-delay:.24s;color:var(--lima)}
+.hero p{font-size:1.15rem;max-width:560px;opacity:.95}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 22px;border-radius:18px;background:var(--verde);color:#fff;box-shadow:0 8px 0 #135a26;transition:transform .15s}
+.btn:active{transform:translateY(6px);box-shadow:0 2px 0 #135a26}
+.btn.am{background:var(--amarillo);color:var(--tinta);box-shadow:0 8px 0 #c79c11}
+@keyframes salta{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes lat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+/* cinta */
+.cinta{background:var(--morado);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:"Baloo 2";font-weight:700;font-size:1.3rem}
+.cinta div{display:inline-block;animation:corre 22s linear infinite}
+.cinta b{color:var(--amarillo);margin:0 18px}
+@keyframes corre{to{transform:translateX(-50%)}}
+section{padding:64px 18px}
+.wrap{max-width:1100px;margin:0 auto}
+.tit{font-size:clamp(2rem,7vw,3.2rem);color:var(--verde);margin-bottom:10px}
+.sub{font-size:1.05rem;max-width:640px;margin-bottom:28px;opacity:.85}
+/* Hoy */
+.hoy{background:linear-gradient(135deg,var(--amarillo),#ffb703);border-radius:28px;padding:24px;display:grid;gap:8px;box-shadow:0 14px 30px rgba(255,183,3,.35)}
+.hoy small{font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.hoy h3{font-size:1.8rem}
+/* zonas */
+.zonas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.zona{position:relative;border-radius:26px;overflow:hidden;min-height:330px;color:#fff;display:flex;align-items:flex-end;transform:translateY(30px);opacity:0;transition:.7s}
+.zona.ver{transform:none;opacity:1}
+.zona img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 6s}
+.zona:hover img,.zona.ver img{transform:scale(1.08)}
+.zona::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.8))}
+.zona div{position:relative;z-index:2;padding:20px}
+.zona h3{font-size:1.7rem}
+.zona .n{position:absolute;top:14px;left:14px;z-index:2;background:var(--rojo);font:800 1.1rem "Baloo 2";width:44px;height:44px;border-radius:50%;display:grid;place-items:center}
+/* por qué */
+.porque{background:var(--verde);color:#fff}
+.porque .tit{color:var(--amarillo)}
+.lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.lista div{background:rgba(255,255,255,.12);border-radius:20px;padding:20px;border-left:6px solid var(--amarillo)}
+.lista h3{font-size:1.35rem;margin-bottom:6px}
+/* fiesta */
+.fiesta{display:grid;gap:24px;align-items:center}
+@media(min-width:800px){.fiesta{grid-template-columns:1.1fr 1fr}}
+.fiesta img{width:100%;border-radius:26px;box-shadow:0 18px 40px rgba(0,0,0,.2)}
+/* formulario */
+.form{background:#fff;border-radius:26px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.08);display:grid;gap:12px}
+.form label{font-weight:800;font-size:.9rem}
+.form input,.form select,.form textarea{width:100%;padding:13px;border-radius:14px;border:2px solid #e6e1d4;font:600 1rem Nunito;background:var(--crema)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:0;border-color:var(--verde)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* galería */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.gal img{width:100%;height:190px;object-fit:cover;border-radius:18px;cursor:pointer;transition:transform .3s}
+.gal img:hover{transform:rotate(-1.5deg) scale(1.03)}
+.vid{width:100%;border-radius:26px;margin-top:16px;background:#000}
+/* contacto */
+.contacto{background:var(--tinta);color:#fff;text-align:center}
+.contacto .tit{color:var(--lima)}
+.redes{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
+.redes a{text-decoration:none;font-weight:800;padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.1)}
+.letrero{max-width:560px;width:100%;border-radius:22px;margin:24px auto 0;display:block}
+footer{background:#0f0f1d;color:#bbb;text-align:center;padding:24px 16px 100px;font-size:.85rem}
+footer a{color:var(--amarillo)}
+.wa{position:fixed;right:16px;bottom:18px;z-index:60;background:#25d366;color:#fff;font-weight:800;text-decoration:none;padding:15px 20px;border-radius:999px;box-shadow:0 10px 26px rgba(37,211,102,.5);animation:lat 2s infinite}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;place-items:center;z-index:99}
+.lb.on{display:grid}
+.lb img{max-width:94vw;max-height:88vh;border-radius:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="marca" href="#inicio"><img src="img/icon-192.png" alt="Los Grillitos">Los Grillitos</a>
+  <div class="acc">
+    <button class="chip alt" id="lang">EN</button>
+    <button class="chip" id="refresh" data-es="Actualizar" data-en="Refresh">Actualizar</button>
+  </div>
+</header>
+
+<section class="hero" id="inicio" style="padding:0">
+  <video autoplay muted loop playsinline poster="img/toboganes.jpg"><source src="video/recorrido.mp4" type="video/mp4"></video>
+  <div class="in">
+    <span class="edad" data-es="Para niños de 1 a 6 años" data-en="For kids ages 1 to 6">Para niños de 1 a 6 años</span>
+    <h1><span>Los</span> <span>Gri</span><span>lli</span><span>tos</span></h1>
+    <p data-es="Diversión sin fin en Caldas, Antioquia. Piscinas de pelotas, brinquitos, toboganes, zona de bebés y fiestas con piñata, en un lugar pensado para los más pequeños." data-en="Endless fun in Caldas, Antioquia. Ball pits, trampolines, slides, a baby zone and piñata parties, in a place made for little ones.">Diversión sin fin en Caldas, Antioquia. Piscinas de pelotas, brinquitos, toboganes, zona de bebés y fiestas con piñata, en un lugar pensado para los más pequeños.</p>
+    <div class="btns">
+      <a class="btn" href="#reserva" data-es="Reservar o celebrar" data-en="Book or celebrate">Reservar o celebrar</a>
+      <a class="btn am" href="#zonas" data-es="Ver las zonas" data-en="See the zones">Ver las zonas</a>
+    </div>
+  </div>
+</section>
+
+<div class="cinta"><div id="cinta"></div></div>
+
+<section>
+  <div class="wrap">
+    <div class="hoy">
+      <small id="hoyFecha"></small>
+      <h3 id="hoyTit"></h3>
+      <p id="hoyTxt"></p>
+    </div>
+  </div>
+</section>
+
+<section id="zonas" style="padding-top:10px">
+  <div class="wrap">
+    <h2 class="tit" data-es="Zonas para jugar" data-en="Play zones">Zonas para jugar</h2>
+    <p class="sub" data-es="Cada rincón está hecho a la medida de los niños de 1 a 6 años: blandito, colorido y con redes de protección." data-en="Every corner is made to fit kids ages 1 to 6: soft, colorful and with safety nets.">Cada rincón está hecho a la medida de los niños de 1 a 6 años: blandito, colorido y con redes de protección.</p>
+    <div class="zonas">
+      <article class="zona"><span class="n">1</span><img src="img/piscina-pelotas.jpg" alt="Piscina de pelotas"><div><h3 data-es="Piscinas de pelotas" data-en="Ball pits">Piscinas de pelotas</h3><p data-es="Miles de pelotas de colores y tobogán para caer en ellas." data-en="Thousands of colorful balls and a slide to land in them.">Miles de pelotas de colores y tobogán para caer en ellas.</p></div></article>
+      <article class="zona"><span class="n">2</span><img src="img/brinquito.jpg" alt="Brinquito"><div><h3 data-es="Brinquitos" data-en="Mini trampolines">Brinquitos</h3><p data-es="Trampolines pequeños con malla y tubos acolchados." data-en="Small trampolines with nets and padded poles.">Trampolines pequeños con malla y tubos acolchados.</p></div></article>
+      <article class="zona"><span class="n">3</span><img src="img/zona-bebes.jpg" alt="Zona de bebés"><div><h3 data-es="Zona de los más pequeños" data-en="Toddler zone">Zona de los más pequeños</h3><p data-es="Casita, columpio, colchonetas y piscina de pelotas baja." data-en="Playhouse, swing, soft mats and a low ball pit.">Casita, columpio, colchonetas y piscina de pelotas baja.</p></div></article>
+      <article class="zona"><span class="n">4</span><img src="img/toboganes.jpg" alt="Toboganes"><div><h3 data-es="Toboganes y laberinto" data-en="Slides and play maze">Toboganes y laberinto</h3><p data-es="Estructura de juegos con rodaderos, túneles y redes." data-en="Play structure with slides, tunnels and nets.">Estructura de juegos con rodaderos, túneles y redes.</p></div></article>
+      <article class="zona"><span class="n">5</span><img src="img/pinatas.jpg" alt="Zona para piñatas"><div><h3 data-es="Zona para piñatas" data-en="Piñata party area">Zona para piñatas</h3><p data-es="Aquí se celebra la vida: cumpleaños con piñata y torta." data-en="Here we celebrate life: birthdays with piñata and cake.">Aquí se celebra la vida: cumpleaños con piñata y torta.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="porque">
+  <div class="wrap">
+    <h2 class="tit" data-es="Por qué a los papás les gusta" data-en="Why parents love it">Por qué a los papás les gusta</h2>
+    <div class="lista">
+      <div><h3 data-es="Hecho para 1 a 6 años" data-en="Made for ages 1–6">Hecho para 1 a 6 años</h3><p data-es="Juegos de su tamaño, sin los empujones de los niños grandes." data-en="Games their size, without big kids pushing around.">Juegos de su tamaño, sin los empujones de los niños grandes.</p></div>
+      <div><h3 data-es="Todo acolchado" data-en="Everything padded">Todo acolchado</h3><p data-es="Colchonetas, tubos forrados y mallas de protección." data-en="Soft mats, covered poles and safety nets.">Colchonetas, tubos forrados y mallas de protección.</p></div>
+      <div><h3 data-es="Papás cerca" data-en="Parents nearby">Papás cerca</h3><p data-es="Sillas junto a las zonas para acompañar y ver jugar." data-en="Seats right next to the zones to watch and join in.">Sillas junto a las zonas para acompañar y ver jugar.</p></div>
+      <div><h3 data-es="Juguetes didácticos" data-en="Educational toys">Juguetes didácticos</h3><p data-es="También tienen tienda de juguetes para llevar a casa." data-en="There is also a toy shop to take something home.">También tienen tienda de juguetes para llevar a casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva">
+  <div class="wrap fiesta">
+    <div>
+      <h2 class="tit" data-es="Celebra aquí su cumpleaños" data-en="Celebrate their birthday here">Celebra aquí su cumpleaños</h2>
+      <p class="sub" data-es="Llena los datos y el mensaje sale listo por WhatsApp a Los Grillitos. Ellos te confirman disponibilidad, horarios y precios." data-en="Fill in the details and the message goes ready via WhatsApp to Los Grillitos. They will confirm availability, hours and prices.">Llena los datos y el mensaje sale listo por WhatsApp a Los Grillitos. Ellos te confirman disponibilidad, horarios y precios.</p>
+      <img src="img/pinatas.jpg" alt="Aquí se celebra la vida">
+    </div>
+    <form class="form" id="form">
+      <label for="nom" data-es="Tu nombre" data-en="Your name">Tu nombre</label>
+      <input id="nom" required>
+      <label for="tipo" data-es="¿Qué quieres?" data-en="What do you want?">¿Qué quieres?</label>
+      <select id="tipo"></select>
+      <div class="dos">
+        <div><label for="fecha" data-es="Fecha" data-en="Date">Fecha</label><input type="date" id="fecha"></div>
+        <div><label for="ninos" data-es="Niños" data-en="Kids">Niños</label><input type="number" id="ninos" min="1" value="1"></div>
+      </div>
+      <label for="edades" data-es="Edades de los niños" data-en="Kids' ages">Edades de los niños</label>
+      <input id="edades" placeholder="2 y 4 años">
+      <label for="nota" data-es="Algo más" data-en="Anything else">Algo más</label>
+      <textarea id="nota" rows="3"></textarea>
+      <button class="btn" type="submit" data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="tit" data-es="Así se vive" data-en="See it live">Así se vive</h2>
+    <div class="gal" id="gal">
+      <img src="img/piscina-pelotas.jpg" alt=""><img src="img/brinquito.jpg" alt=""><img src="img/zona-bebes.jpg" alt=""><img src="img/toboganes.jpg" alt=""><img src="img/pinatas.jpg" alt="">
+    </div>
+    <video class="vid" controls playsinline preload="metadata" poster="img/zona-bebes.jpg"><source src="video/recorrido.mp4" type="video/mp4"></video>
+  </div>
+</section>
+
+<section class="contacto">
+  <div class="wrap">
+    <h2 class="tit" data-es="Solicita información" data-en="Ask for information">Solicita información</h2>
+    <p data-es="Caldas, Antioquia · WhatsApp 314 679 0638" data-en="Caldas, Antioquia · WhatsApp +57 314 679 0638">Caldas, Antioquia · WhatsApp 314 679 0638</p>
+    <div class="redes">
+      <a href="https://wa.me/573146790638" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/losgrillitoscaldas/" target="_blank" rel="noopener">Instagram @losgrillitoscaldas</a>
+      <a href="https://www.facebook.com/grillitosdiversionsinfin/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.google.com/maps/search/Los+Grillitos+Caldas+Antioquia" target="_blank" rel="noopener" data-es="Cómo llegar" data-en="Directions">Cómo llegar</a>
+      <a href="#" id="compartir" data-es="Compartir app" data-en="Share app">Compartir app</a>
+    </div>
+    <img class="letrero" src="img/letrero.jpg" alt="Los Grillitos - Diversión sin fin">
+  </div>
+</section>
+
+<footer>
+  <p>Los Grillitos · Diversión sin fin · Caldas, Antioquia</p>
+  <p style="margin-top:8px"><span data-es="App hecha por" data-en="App made by">App hecha por</span> <a href="https://vibraspositivashm.netlify.app" target="_blank" rel="noopener">Vibras Positivas HM</a> · 311 770 0431</p>
+</footer>
+
+<a class="wa" href="https://wa.me/573146790638" target="_blank" rel="noopener">WhatsApp</a>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const WA="573146790638";
+let L=localStorage.getItem("lg_lang")||"es";
+const T={
+ es:{cinta:["Piscinas de pelotas","Brinquitos","Toboganes","Zona de bebés","Cumpleaños con piñata","Juguetes didácticos","De 1 a 6 años"],
+     tipos:["Venir a jugar","Celebrar un cumpleaños","Información de precios y horarios","Juguetes didácticos"],
+     dias:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],
+     hoy:"Hoy en Los Grillitos",
+     plan:["Domingo en familia: el mejor día para soltar energía en las piscinas de pelotas.","Arranca la semana brincando: los brinquitos esperan a los más pequeños.","Martes de toboganes: a deslizarse y caer en las pelotas.","Mitad de semana, mitad de juego: trae a los niños a la zona de bebés.","Jueves de amigos: invita a los primos y vengan juntos.","Viernes de fiesta: separa ya la zona para piñatas del fin de semana.","Sábado de diversión sin fin: llega temprano y aprovecha todas las zonas."],
+     msg:(d)=>`Hola Los Grillitos. Soy ${d.nom}. Quiero: ${d.tipo}. Fecha: ${d.fecha||"por definir"}. Niños: ${d.ninos}. Edades: ${d.edades||"-"}. ${d.nota}`},
+ en:{cinta:["Ball pits","Mini trampolines","Slides","Baby zone","Piñata birthdays","Educational toys","Ages 1 to 6"],
+     tipos:["Come to play","Celebrate a birthday","Prices and opening hours","Educational toys"],
+     dias:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+     hoy:"Today at Los Grillitos",
+     plan:["Family Sunday: the best day to burn energy in the ball pits.","Start the week bouncing: the mini trampolines are waiting.","Slide Tuesday: slide down and land in the balls.","Midweek, midplay: bring the little ones to the baby zone.","Friends Thursday: invite the cousins and come together.","Party Friday: book the piñata area for the weekend now.","Endless-fun Saturday: come early and enjoy every zone."],
+     msg:(d)=>`Hello Los Grillitos. I'm ${d.nom}. I want: ${d.tipo}. Date: ${d.fecha||"TBD"}. Kids: ${d.ninos}. Ages: ${d.edades||"-"}. ${d.nota}`}
+};
+function hoy(){
+  const f=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Bogota"}));
+  const t=T[L];
+  document.getElementById("hoyFecha").textContent=t.dias[f.getDay()]+" · "+f.toLocaleDateString(L==="es"?"es-CO":"en-US",{day:"numeric",month:"long",year:"numeric"})+" · "+f.toLocaleTimeString(L==="es"?"es-CO":"en-US",{hour:"2-digit",minute:"2-digit"});
+  document.getElementById("hoyTit").textContent=t.hoy;
+  document.getElementById("hoyTxt").textContent=t.plan[f.getDay()];
+}
+function idioma(){
+  document.documentElement.lang=L;
+  document.querySelectorAll("[data-es]").forEach(e=>e.textContent=e.dataset[L]);
+  document.getElementById("lang").textContent=L==="es"?"EN":"ES";
+  const c=T[L].cinta.map(x=>x+"<b>·</b>").join("");
+  document.getElementById("cinta").innerHTML=c+c;
+  document.getElementById("tipo").innerHTML=T[L].tipos.map(x=>`<option>${x}</option>`).join("");
+  hoy();
+}
+document.getElementById("lang").onclick=()=>{L=L==="es"?"en":"es";localStorage.setItem("lg_lang",L);idioma()};
+document.getElementById("refresh").onclick=()=>location.reload();
+document.getElementById("form").onsubmit=e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const d={nom:v("nom"),tipo:v("tipo"),fecha:v("fecha"),ninos:v("ninos"),edades:v("edades"),nota:v("nota")};
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(T[L].msg(d))}`,"_blank");
+};
+document.getElementById("compartir").onclick=e=>{
+  e.preventDefault();
+  const u=location.href.split("#")[0];
+  if(navigator.share)navigator.share({title:"Los Grillitos",text:"Diversión sin fin en Caldas, Antioquia",url:u});
+  else window.open("https://wa.me/?text="+encodeURIComponent("Los Grillitos · Diversión sin fin "+u),"_blank");
+};
+const lb=document.getElementById("lb");
+document.querySelectorAll("#gal img").forEach(i=>i.onclick=()=>{lb.querySelector("img").src=i.src;lb.classList.add("on")});
+lb.onclick=()=>lb.classList.remove("on");
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)x.target.classList.add("ver")}),{threshold:.2});
+document.querySelectorAll(".zona").forEach(z=>io.observe(z));
+idioma();setInterval(hoy,60000);
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js");
+</script>
+</body>
+</html>
